@@ -32,7 +32,7 @@ def get_japanese_emoticon(file_path, emoticon)
   hash = load_library(file_path)
   result = ""
   hash.each do |name, emoticons|
-    if name == emoticon
+    if emoticons[:english] == emoticon
       result = emoticons[:japanese]
     end
   end
